@@ -1,0 +1,78 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="4dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:text="Title"
+        android:textSize="30sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <TextView
+        android:id="@+id/description"
+        android:text="Description"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:id="@+id/platform"
+        android:text="Platform"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <TextView
+        android:id="@+id/budget"
+        android:text="Budget"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <TextView
+        android:id="@+id/deadline"
+        android:text="Deadline"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:text="Delete Campaign"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+
+    <TextView
+        android:text="Applied Influencers"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <ListView
+        android:id="@+id/listApplied"
+        android:layout_width="match_parent"
+        android:layout_height="140dp" />
+
+    <TextView
+        android:text="Approved Influencers"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <ListView
+        android:id="@+id/listApproved"
+        android:layout_width="match_parent"
+        android:layout_height="152dp" />
+</LinearLayout>
+</ScrollView>

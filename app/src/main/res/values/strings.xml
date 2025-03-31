@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">BrandFluence(Android)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="platform_array">
+        <item>Select Platform</item>
+        <item>Instagram</item>
+        <item>YouTube</item>
+    </string-array>
+
+    <string-array name="gender_options">
+        <item>Any</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="platform_options">
+        <item>Any</item>
+        <item>Instagram</item>
+        <item>YouTube</item>
+
+    </string-array>
+
+    <string-array name="platforms_array">
+        <item>All</item>
+        <item>Instagram</item>
+        <item>YouTube</item>
+        <item>TikTok</item>
+        <item>Twitter</item>
+    </string-array>
+
+    <string-array name="platforms_array_select">
+        <item>Instagram</item>
+        <item>YouTube</item>
+        <item>TikTok</item>
+        <item>Twitter</item>
+    </string-array>
+
+
+</resources>

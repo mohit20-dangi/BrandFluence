@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".BrandDashboardActivity">
+
+    <!-- Top App Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:elevation="4dp"
+        android:padding="10dp" />
+
+    <!-- Create Campaign Button -->
+    <Button
+        android:id="@+id/createCampaignButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topAppBar"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2196F3"
+        android:text="Create New Campaign"
+        android:textColor="#FFFFFF" />
+
+    <!-- Title above campaigns -->
+    <TextView
+        android:id="@+id/prevCampaignsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/createCampaignButton"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Previous Campaigns"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Swipe to Refresh -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@id/prevCampaignsTitle"
+        android:layout_marginTop="4dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/previousCampaignsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            tools:listitem="@layout/item_campaign_card" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Filter Button -->
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/swipeRefreshLayout"
+        android:layout_margin="16dp"
+        android:drawableLeft="@android:drawable/ic_menu_sort_by_size"
+        android:text="Filter" />
+
+    <!-- Recommended Influencers Title -->
+    <TextView
+        android:id="@+id/randomInfluencersTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterButton"
+        android:layout_margin="16dp"
+        android:text="Recommended Influencers"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Influencer RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/influencersRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/randomInfluencersTitle"
+        android:layout_marginBottom="16dp"
+        tools:listitem="@layout/item_influencer_card" />
+
+</RelativeLayout>

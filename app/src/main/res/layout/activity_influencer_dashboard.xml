@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".InfluencerDashboardActivity">
+
+    <!-- Top App Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:padding="10dp"
+        android:title="Influencer Dashboard"
+        android:titleTextColor="@android:color/white"/>
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topAppBar"
+        android:layout_margin="16dp"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:hint="Search campaigns..."
+        android:padding="12dp"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/black"/>
+
+    <!-- Applied Campaigns Section -->
+    <TextView
+        android:id="@+id/appliedCampaignsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBar"
+        android:layout_margin="16dp"
+        android:text="Applied Campaigns"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appliedCampaignsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/appliedCampaignsTitle"
+        android:layout_marginHorizontal="8dp"
+        android:background="@color/black"
+        tools:listitem="@layout/item_campaign_card"/>
+
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appliedCampaignsRecycler"
+        android:layout_margin="16dp"
+        android:drawableLeft="@android:drawable/ic_menu_sort_by_size"
+        android:text="Filter" />
+
+    <!-- Available Campaigns Section -->
+    <TextView
+        android:id="@+id/availableCampaignsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterButton"
+        android:layout_margin="16dp"
+        android:text="Available Campaigns"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/availableCampaignsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/availableCampaignsTitle"
+        android:layout_marginBottom="16dp"
+        android:background="@color/black"
+        tools:listitem="@layout/item_campaign_card"/>
+
+</RelativeLayout>

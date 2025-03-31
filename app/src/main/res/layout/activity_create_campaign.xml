@@ -1,0 +1,64 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top App Bar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:elevation="4dp" />
+
+        <EditText
+            android:id="@+id/etCampaignTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Campaign Title"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etCampaignDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Campaign Description"
+            android:minLines="3"
+            android:gravity="top"
+            android:inputType="textMultiLine" />
+
+        <Spinner
+            android:id="@+id/spinnerPlatform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Budget (USD)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etDeadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deadline"
+            android:focusable="false"
+            android:clickable="true" />
+
+        <Button
+            android:id="@+id/btnSubmitCampaign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Campaign"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFF" />
+    </LinearLayout>
+</ScrollView>
